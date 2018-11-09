@@ -8,3 +8,9 @@
  */
 
 rootProject.name = "learn-kotlin"
+
+include("greeting-java")
+include("greeting-kotlin")
+include("greeter")
+include("01-hello-kotlin")
+
