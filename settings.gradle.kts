@@ -13,4 +13,6 @@ include("greeting-java")
 include("greeting-kotlin")
 include("greeter")
 include("01-hello-kotlin")
-
+include("02-variables")
+include("03-conditionals")
+include("04-functions")
