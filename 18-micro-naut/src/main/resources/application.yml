@@ -1,0 +1,8 @@
+micronaut:
+    application:
+        name: micro-naut
+    router:
+        static-resources:
+            default:
+                mapping: /**
+                paths: classpath:public
