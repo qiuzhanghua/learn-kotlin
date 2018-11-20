@@ -2,6 +2,9 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.jetbrains.kotlin.cli.common.arguments.mergeBeans
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.time.ZonedDateTime
+import java.time.ZoneOffset
+import java.time.format.DateTimeFormatter
 
 plugins {
     java
@@ -43,11 +46,26 @@ dependencies {
 }
 
 
-//TODO how to use shadowJar ?
-//val shadowJar by tasks.getting(ShadowJar::class)   ???
-//shadowJar {
-//    mergeServiceFiles()
-//}
+// Thanks you, https://github.com/x80486
+// https://github.com/micronaut-projects/micronaut-examples/issues/27
+
+tasks {
+    withType<ShadowJar> {
+        baseName = project.name
+        classifier = "shadow" // fat, shadow
+        manifest.attributes.apply {
+            put("Application-Name", project.name)
+            put("Build-Date", ZonedDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ISO_DATE_TIME))
+            put("Created-By", System.getProperty("user.name"))
+            put("Gradle-Version", gradle.gradleVersion)
+            put("Implementation-Version", "${project.version}")
+            put("JDK-Version", System.getProperty("java.version"))
+        }
+        mergeServiceFiles()
+        version = "${project.version}"
+    }
+}
+
 
 val run by tasks.getting(JavaExec::class)
 run.jvmArgs("-noverify", "-XX:TieredStopAtLevel=1")
