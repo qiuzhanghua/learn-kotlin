@@ -1,6 +1,5 @@
 package com.github.qiuzhanghua.learn
 
-import javafx.application.Application.launch
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 
