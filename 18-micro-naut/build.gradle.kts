@@ -11,15 +11,15 @@ plugins {
     kotlin("jvm")
     kotlin("kapt")
     id("io.spring.dependency-management") version "1.0.6.RELEASE"
-    id("com.github.johnrengelman.shadow") version "4.0.2"
-    id("org.jetbrains.kotlin.plugin.allopen") version "1.3.10"
+    id("com.github.johnrengelman.shadow") version "${Deps.shadowVersion}"
+    id("org.jetbrains.kotlin.plugin.allopen") version "${Deps.kotlinVersion}"
     application
 }
 
 
 the<DependencyManagementExtension>().apply {
     imports {
-        mavenBom("io.micronaut:micronaut-bom:1.0.1")
+        mavenBom("io.micronaut:micronaut-bom:${Deps.micronautVersion}")
     }
 }
 
@@ -49,8 +49,7 @@ dependencies {
 // Thanks you, https://github.com/x80486
 // https://github.com/micronaut-projects/micronaut-examples/issues/27
 
-tasks {
-    withType<ShadowJar> {
+tasks.withType<ShadowJar> {
         baseName = project.name
         classifier = "shadow" // fat, shadow
         manifest.attributes.apply {
@@ -63,7 +62,6 @@ tasks {
         }
         mergeServiceFiles()
         version = "${project.version}"
-    }
 }
 
 

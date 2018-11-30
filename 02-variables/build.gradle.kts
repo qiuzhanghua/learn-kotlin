@@ -10,6 +10,6 @@ application {
 
 dependencies {
     compile(kotlin("stdlib-jdk8"))
-    testCompile("junit", "junit", "4.12")
+    testCompile("junit", "junit", "${Deps.junitVersion}")
 }
 

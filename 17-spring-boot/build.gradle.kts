@@ -4,14 +4,12 @@ import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 
 buildscript {
-    val springBootVersion = "2.1.0.RELEASE"
-    val kotlinVersion = "1.3.10"
 
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-        classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
-        classpath("org.jetbrains.kotlin:kotlin-noarg:${kotlinVersion}")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${Deps.springBootVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Deps.kotlinVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-allopen:${Deps.kotlinVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-noarg:${Deps.kotlinVersion}")
     }
 }
 plugins {
