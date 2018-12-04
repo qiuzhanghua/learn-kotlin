@@ -9,6 +9,9 @@ import java.time.Period
 //
 // 2. simple demo if html
 
+// see also:
+// https://kotlinlang.org/docs/reference/type-safe-builders.html
+
 fun main(args: Array<String>) {
     val page = html {
         body {
