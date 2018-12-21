@@ -7,5 +7,5 @@ object Deps {
     val springBootVersion = "2.1.1.RELEASE"
 
     val shadowVersion = "4.0.2"
-    val micronautVersion = "1.0.1"
+    val micronautVersion = "1.0.2"
 }
