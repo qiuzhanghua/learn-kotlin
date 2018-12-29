@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
     val prices = "Watch, Apple 4 with Cellular, 3999"
     // val data: List<String> = prices.split(',').map { it.trim() }
 
-    // destructuring
+    // destructoring
     val (type, brand, price) = prices.split(',')
     println("$type of $brand is $price")
 

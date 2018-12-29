@@ -2,7 +2,7 @@ object Deps {
     val junitVersion = "4.12"
 
     val kotlinVersion = "1.3.11"
-    val coroutinesVersion = "1.0.1"
+    val coroutinesVersion = "1.1.0"
 
     val springBootVersion = "2.1.1.RELEASE"
 
