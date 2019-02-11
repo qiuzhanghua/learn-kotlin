@@ -26,3 +26,6 @@ dependencies {
     testCompile("io.ktor:ktor-server-tests:$ktor_version")
 
 }
+repositories {
+    jcenter()
+}
