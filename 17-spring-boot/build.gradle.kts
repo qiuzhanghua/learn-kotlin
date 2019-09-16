@@ -63,3 +63,7 @@ val compileTestKotlin: KotlinCompile by tasks
 compileTestKotlin.kotlinOptions {
     jvmTarget = "1.8"
 }
+
+repositories {
+    jcenter()
+}

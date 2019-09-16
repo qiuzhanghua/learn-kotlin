@@ -13,3 +13,7 @@ dependencies {
     compile("org.jetbrains.kotlinx", "kotlinx-coroutines-core", "${Deps.coroutinesVersion}")
     testCompile("junit", "junit", "${Deps.junitVersion}")
 }
+
+repositories {
+    jcenter()
+}

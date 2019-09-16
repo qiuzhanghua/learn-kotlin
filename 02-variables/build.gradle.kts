@@ -13,3 +13,6 @@ dependencies {
     testCompile("junit", "junit", "${Deps.junitVersion}")
 }
 
+repositories {
+    jcenter()
+}

@@ -90,3 +90,7 @@ compileTestKotlin.kotlinOptions {
     jvmTarget = "1.8"
     javaParameters = true
 }
+
+repositories {
+    jcenter()
+}
