@@ -1,7 +1,5 @@
 import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.springframework.boot.gradle.tasks.bundling.BootJar
-
 
 buildscript {
 
@@ -42,8 +40,8 @@ the<DependencyManagementExtension>().apply {
 //}
 
 dependencies {
-    compile(kotlin("stdlib-jdk8"))
-    compile(kotlin("reflect"))
+    implementation(kotlin("stdlib-jdk8"))
+    implementation(kotlin("reflect"))
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -56,12 +54,12 @@ dependencies {
 
 val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
-    jvmTarget = "1.8"
+    jvmTarget = "11"
 }
 
 val compileTestKotlin: KotlinCompile by tasks
 compileTestKotlin.kotlinOptions {
-    jvmTarget = "1.8"
+    jvmTarget = "11"
 }
 
 repositories {
