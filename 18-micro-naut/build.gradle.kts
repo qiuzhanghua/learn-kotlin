@@ -57,7 +57,7 @@ tasks.withType<ShadowJar> {
         put("Gradle-Version", gradle.gradleVersion)
         put("Implementation-Version", "${project.version}")
         put("JDK-Version", System.getProperty("java.version"))
-//        put("mainClassName", "com.github.qiuzhanghua.naut.Application")
+//        put("Main-Class", "com.github.qiuzhanghua.naut.Application")
     }
     mergeServiceFiles()
     archiveVersion.set("${project.version}")
@@ -69,7 +69,7 @@ run.jvmArgs("-noverify", "-XX:TieredStopAtLevel=1")
 
 application {
     mainClassName = "com.github.qiuzhanghua.naut.Application"
-//   mainClass.set("com.github.qiuzhanghua.naut.Application")
+//  mainClass.set("com.github.qiuzhanghua.naut.Application")
 }
 
 val test by tasks.getting(Test::class) {
