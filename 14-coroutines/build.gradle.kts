@@ -9,9 +9,7 @@ application {
 }
 
 dependencies {
-    compile(kotlin("stdlib-jdk8"))
-    compile("org.jetbrains.kotlinx", "kotlinx-coroutines-core", "${Deps.coroutinesVersion}")
-    testCompile("junit", "junit", "${Deps.junitVersion}")
+    implementation("org.jetbrains.kotlinx", "kotlinx-coroutines-core", "${Deps.coroutinesVersion}")
 }
 
 repositories {

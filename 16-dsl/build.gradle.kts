@@ -13,9 +13,7 @@ val test by tasks.getting(Test::class) {
 }
 
 dependencies {
-    compile(kotlin("stdlib-jdk8"))
-//    compile(kotlin("compiler-embeddable"))
-    testCompile(group = "io.kotlintest", name = "kotlintest-runner-junit5", version = "3.1.10")
+     testImplementation(group = "io.kotlintest", name = "kotlintest-runner-junit5", version = "3.1.10")
 }
 
 repositories {

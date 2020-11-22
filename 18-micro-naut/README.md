@@ -3,7 +3,7 @@
 An microservice and Serverless framework
 
 ```bash
-gradle -q shaowJar
+gradle -q shadowJar
 java -jar build/libs/18-micro-naut-1.0-shadow.jar
 ```
 

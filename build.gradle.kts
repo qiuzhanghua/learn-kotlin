@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    kotlin("jvm") version "1.4.10"
+    kotlin("jvm") version Deps.kotlinVersion
 }
 
 subprojects {
@@ -19,6 +19,11 @@ compileTestKotlin.kotlinOptions {
     jvmTarget = "11"
 }
 
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
+
 repositories {
     jcenter()
 }
+

@@ -8,8 +8,8 @@ application {
 }
 
 dependencies {
-    compile(project(":greeting-java"))
-    compile(project(":greeting-kotlin"))
+    implementation(project(":greeting-java"))
+    implementation(project(":greeting-kotlin"))
 }
 
 repositories {
